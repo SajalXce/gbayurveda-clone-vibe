@@ -37,7 +37,7 @@ const Navigation = () => {
               href="#services"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Services
+              Pages
             </a>
             <a
               href="#blog"
@@ -55,9 +55,12 @@ const Navigation = () => {
 
           {/* Phone Number & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <div className="hidden lg:flex items-center space-x-2 text-muted-foreground">
+            <div className="hidden lg:flex items-center space-x-3 text-foreground">
               <Phone className="w-4 h-4" />
-              <span className="font-medium">123 456 7890</span>
+              <div className="text-sm">
+                <div className="text-muted-foreground text-xs">Call Us Now</div>
+                <div className="font-semibold">123 456 7890</div>
+              </div>
             </div>
             
             {/* Mobile Menu Button */}
@@ -95,7 +98,7 @@ const Navigation = () => {
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Pages
               </a>
               <a
                 href="#blog"

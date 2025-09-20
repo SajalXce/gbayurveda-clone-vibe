@@ -1,54 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-ayurveda.jpg";
+import heroImage from "@/assets/hero-mortar-pestle.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-hero-gradient opacity-90" />
-      
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-primary-foreground/20 backdrop-blur-sm rounded-full text-primary-foreground text-sm font-medium mb-4 animate-scale-in">
+    <section id="home" className="min-h-screen bg-gradient-to-br from-teal-500 via-teal-400 to-emerald-400 flex items-center relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left Content */}
+          <div className="animate-fade-in text-white">
+            <p className="text-sm font-medium tracking-wider uppercase mb-4 text-white/90">
               WE'RE THE BEST IN
-            </span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-slide-up">
-            AYURVEDA
-            <span className="block text-3xl md:text-5xl lg:text-6xl mt-2 opacity-90">
+            </p>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight mb-4">
+              AYURVEDA
+            </h1>
+            
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-medium mb-6 text-white/95">
               & Ayurvedic Medicine
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Duis variur convls eleme exera tincid magna sed phares purus aceleo.
-          </p>
-          
-          <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            </h2>
+            
+            <p className="text-lg text-white/90 leading-relaxed mb-8 max-w-xl">
+              Duis variur convls eleme exera tincid magna sed phares purus acelao.
+            </p>
+            
             <Button 
-              variant="hero" 
               size="lg" 
-              className="px-8 py-4 text-lg font-semibold group"
+              className="bg-white text-teal-600 hover:bg-white/90 hover:text-teal-700 px-8 py-4 text-lg font-semibold rounded-full"
             >
               Discover More
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
+          </div>
+          
+          {/* Right Image */}
+          <div className="relative animate-scale-in lg:animate-slide-in-right">
+            <div className="relative">
+              <img
+                src={heroImage}
+                alt="Ayurvedic mortar and pestle with herbs and essential oils"
+                className="w-full h-auto max-h-[600px] object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>
-      
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

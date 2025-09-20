@@ -91,8 +91,10 @@ const ProductsSection = () => {
                   {product.price}
                 </p>
                 
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  Add to Cart
+                <Button 
+                  className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                >
+                  🛒 Add to Cart
                 </Button>
               </div>
             </div>
