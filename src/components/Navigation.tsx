@@ -28,28 +28,28 @@ const Navigation = () => {
               Home
             </a>
             <a
-              href="#about"
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-            >
-              About
-            </a>
-            <a
               href="#services"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Pages
+              Services
             </a>
             <a
-              href="#blog"
+              href="#products"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Blog
+              Products
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
               Contact
+            </a>
+            <a
+              href="/certifications"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+            >
+              Certifications
             </a>
           </div>
 
@@ -87,36 +87,36 @@ const Navigation = () => {
                 Home
               </a>
               <a
-                href="#about"
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-              <a
                 href="#services"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Pages
+                Services
               </a>
               <a
-                href="#blog"
+                href="#products"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Blog
+                Products
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </a>
+              <a
+                href="/certifications"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Certifications
+              </a>
               <div className="flex items-center space-x-2 text-muted-foreground pt-2">
                 <Phone className="w-4 h-4" />
-                <span className="font-medium">123 456 7890</span>
+                <span className="font-medium">+91 9936616499</span>
               </div>
             </div>
           </div>

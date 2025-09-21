@@ -8,50 +8,58 @@ const products = [
   {
     id: 1,
     image: product1,
-    title: "Controls Blood Sugar Levels",
-    price: "$22.00"
+    title: "BrainForce Memory Booster",
+    price: 899,
+    name: "BrainForce Memory Booster"
   },
   {
     id: 2,
     image: product2,
-    title: "Power of Triphala and Wheatgrass",
-    price: "$21.00"
+    title: "Ayurvedic Focus Tonic",
+    price: 799,
+    name: "Ayurvedic Focus Tonic"
   },
   {
     id: 3,
     image: product3,
-    title: "Controlling Blood Pressure",
-    price: "$26.00"
+    title: "Stress Relief Capsules",
+    price: 649,
+    name: "Stress Relief Capsules"
   },
   {
     id: 4,
     image: product4,
-    title: "Relieves Constipation & Improves Digestion",
-    price: "$18.00"
+    title: "Mental Clarity Syrup",
+    price: 549,
+    name: "Mental Clarity Syrup"
   },
   {
     id: 5,
     image: product1,
-    title: "Ayurvedic Capsules for Muscle Gain",
-    price: "$17.00"
+    title: "Ayurvedic Brain Tonic",
+    price: 699,
+    name: "Ayurvedic Brain Tonic"
   },
   {
     id: 6,
     image: product2,
-    title: "Ayurvedic Immunity Booster for Kids",
-    price: "$13.00"
+    title: "Cognitive Enhancement Pills",
+    price: 599,
+    name: "Cognitive Enhancement Pills"
   },
   {
     id: 7,
     image: product3,
-    title: "Herbal Green Tea with lemon Extract",
-    price: "$10.00"
+    title: "Herbal Mind Booster",
+    price: 499,
+    name: "Herbal Mind Booster"
   },
   {
     id: 8,
     image: product4,
-    title: "Ayurvedic Herbal Green Tea",
-    price: "$7.00"
+    title: "Natural Brain Food",
+    price: 399,
+    name: "Natural Brain Food"
   }
 ];
 
@@ -88,11 +96,12 @@ const ProductsSection = () => {
                 </h3>
                 
                 <p className="text-2xl font-bold text-primary mb-4">
-                  {product.price}
+                  ₹{product.price}
                 </p>
                 
                 <Button 
                   className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                  onClick={() => window.location.href = '/cart'}
                 >
                   🛒 Add to Cart
                 </Button>
