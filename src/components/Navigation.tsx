@@ -15,7 +15,7 @@ const Navigation = () => {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-2xl font-heading font-bold text-foreground">
-              Ayurved
+              BrianForce
             </span>
           </div>
 
@@ -59,7 +59,7 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <div className="text-sm">
                 <div className="text-muted-foreground text-xs">Call Us Now</div>
-                <div className="font-semibold">123 456 7890</div>
+                <div className="font-semibold">+91 9936616499</div>
               </div>
             </div>
             
