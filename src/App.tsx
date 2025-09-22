@@ -10,6 +10,9 @@ import Shipping from "./pages/Shipping";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import Contact from "./pages/Contact";
 import Certifications from "./pages/Certifications";
+import Product from "./pages/Product";
+import Refund from "./pages/Refund";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,9 @@ const App = () => (
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/certifications" element={<Certifications />} />
+          <Route path="/product/:id?" element={<Product />} />
+          <Route path="/refund" element={<Refund />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
