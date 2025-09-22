@@ -33,34 +33,6 @@ const products = [
     price: 549,
     name: "Mental Clarity Syrup"
   },
-  {
-    id: 5,
-    image: product1,
-    title: "Ayurvedic Brain Tonic",
-    price: 699,
-    name: "Ayurvedic Brain Tonic"
-  },
-  {
-    id: 6,
-    image: product2,
-    title: "Cognitive Enhancement Pills",
-    price: 599,
-    name: "Cognitive Enhancement Pills"
-  },
-  {
-    id: 7,
-    image: product3,
-    title: "Herbal Mind Booster",
-    price: 499,
-    name: "Herbal Mind Booster"
-  },
-  {
-    id: 8,
-    image: product4,
-    title: "Natural Brain Food",
-    price: 399,
-    name: "Natural Brain Food"
-  }
 ];
 
 const ProductsSection = () => {

@@ -1,9 +1,29 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, Leaf } from "lucide-react";
+import { Phone, Menu, X, Leaf, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPagesOpen, setIsPagesOpen] = useState(false);
+  const pagesRef = useRef<HTMLDivElement | null>(null);
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        pagesRef.current &&
+        !pagesRef.current.contains(event.target as Node)
+      ) {
+        setIsPagesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
@@ -27,14 +47,42 @@ const Navigation = () => {
             >
               Home
             </a>
+
+            {/* Dropdown wrapper */}
+            <div className="relative" ref={pagesRef}>
+              <button
+                onClick={() => setIsPagesOpen(!isPagesOpen)}
+                className="flex items-center gap-1 cursor-pointer text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              >
+                Pages
+                <ChevronDown
+                  className={`mt-[2px] transition-transform duration-200 ${
+                    isPagesOpen ? "rotate-180" : ""
+                  }`}
+                  size={18}
+                />
+              </button>
+
+              {isPagesOpen && (
+                <div className="absolute left-0 mt-2 w-44 rounded-xl bg-white shadow-lg animate-fade-in">
+                  <a
+                    href="/refund"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    Refund
+                  </a>
+                  <a
+                    href="/privacy"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    Privacy
+                  </a>
+                </div>
+              )}
+            </div>
+
             <a
-              href="/"
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Services
-            </a>
-            <a
-              href="/"
+              href="/product"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
               Products
@@ -62,7 +110,7 @@ const Navigation = () => {
                 <div className="font-semibold">+91 9936616499</div>
               </div>
             </div>
-            
+
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"
@@ -70,7 +118,11 @@ const Navigation = () => {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </Button>
           </div>
         </nav>
