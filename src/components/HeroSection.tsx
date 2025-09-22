@@ -1,14 +1,34 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/brainS1.png";
 import bg1 from "@/assets/bgt1.jpg"
+import leafPattern from "@/assets/leaf1.jpg"
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg1})` }}
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
+      {/* Layered Ayurvedic Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/95 to-teal-800/90"></div>
+      <div 
+        className="absolute inset-0 opacity-20 bg-cover bg-center mix-blend-overlay"
+        style={{ backgroundImage: `url(${leafPattern})` }}
+      ></div>
+      <div 
+        className="absolute inset-0 opacity-30 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bg1})` }}
+      ></div>
+      
+      {/* Floating Herbal Elements */}
+      <div className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-600/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-amber-400/15 to-yellow-600/15 rounded-full blur-xl animate-pulse delay-300"></div>
+      <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-br from-teal-400/20 to-cyan-600/20 rounded-full blur-xl animate-pulse delay-700"></div>
+      
+      {/* Subtle Pattern Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.1),transparent_50%)]"></div>
+      
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
