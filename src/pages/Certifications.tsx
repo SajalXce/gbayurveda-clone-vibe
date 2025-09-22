@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Shield, CheckCircle, Star, Users, Calendar } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import leaf from "@/assets/leaf1.jpg"
+
 
 const Certifications = () => {
   const certifications = [
@@ -72,7 +74,8 @@ const Certifications = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark py-16">
+        <section className="bg-gradient-to-br from-primary to-primary-dark py-16"
+         style={{ backgroundImage: `url(${leaf})` }}>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
             Our Certifications

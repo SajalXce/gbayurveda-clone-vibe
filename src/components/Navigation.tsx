@@ -22,19 +22,19 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#home"
+              href="/"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
               Home
             </a>
             <a
-              href="#services"
+              href="/"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
               Services
             </a>
             <a
-              href="#products"
+              href="/"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
               Products
@@ -80,7 +80,7 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border bg-background animate-fade-in">
             <div className="flex flex-col space-y-4">
               <a
-                href="#home"
+                href="/"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -94,7 +94,7 @@ const Navigation = () => {
                 Services
               </a>
               <a
-                href="#products"
+                href="/home"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

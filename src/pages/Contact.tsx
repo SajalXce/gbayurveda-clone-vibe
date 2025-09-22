@@ -8,6 +8,7 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
+import leaf from "@/assets/leaf1.jpg"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +43,9 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark py-16">
+ 
+        <section className="bg-gradient-to-br from-primary to-primary-dark py-16"
+         style={{ backgroundImage: `url(${leaf})` }}>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
             Get in Touch

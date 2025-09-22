@@ -12,7 +12,7 @@ const Footer = () => {
                 <Leaf className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="text-2xl font-heading font-bold">
-                Ayurved
+                BrainForce
               </span>
             </div>
             <p className="text-background/80 leading-relaxed">
@@ -72,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            © 2024 Ayurved. All rights reserved. | Designed with ❤️ for natural healing
+            © 2024 Ayurved. All rights reserved. | Designed with for natural healing
           </p>
         </div>
       </div>
