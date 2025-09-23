@@ -35,7 +35,7 @@ const Navigation = () => {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-2xl font-heading font-bold text-foreground">
-              BrianForce
+              BRAINFORCE
             </span>
           </div>
 
@@ -143,10 +143,10 @@ const Navigation = () => {
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                About
               </a>
               <a
-                href="/home"
+                href="/product"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

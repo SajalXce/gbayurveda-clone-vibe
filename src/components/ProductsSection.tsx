@@ -1,37 +1,34 @@
 import { Button } from "@/components/ui/button";
-import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
+import brainforceProduct from "@/assets/brainforce-product.jpg";
 
 const products = [
   {
     id: 1,
-    image: product1,
-    title: "BrainForce Memory Booster",
-    price: 899,
-    name: "BrainForce Memory Booster"
+    image: brainforceProduct,
+    title: "BRAINFORCE Syrup 200ml",
+    price: 220,
+    name: "BRAINFORCE Syrup"
   },
   {
     id: 2,
-    image: product2,
-    title: "Ayurvedic Focus Tonic",
-    price: 799,
-    name: "Ayurvedic Focus Tonic"
+    image: brainforceProduct,
+    title: "BRAINFORCE Syrup (Pack of 2)",
+    price: 400,
+    name: "BRAINFORCE Syrup Pack"
   },
   {
     id: 3,
-    image: product3,
-    title: "Stress Relief Capsules",
-    price: 649,
-    name: "Stress Relief Capsules"
+    image: brainforceProduct,
+    title: "BRAINFORCE Syrup (Family Pack)",
+    price: 800,
+    name: "BRAINFORCE Family Pack"
   },
   {
     id: 4,
-    image: product4,
-    title: "Mental Clarity Syrup",
-    price: 549,
-    name: "Mental Clarity Syrup"
+    image: brainforceProduct,
+    title: "BRAINFORCE Syrup (Monthly Supply)",
+    price: 1200,
+    name: "BRAINFORCE Monthly Pack"
   },
 ];
 
@@ -42,8 +39,8 @@ const ProductsSection = () => {
         <div className="text-center mb-16 animate-fade-in">
           <p className="text-primary text-sm font-medium tracking-wide uppercase mb-4">PRODUCTS</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-            We Are Here To Give You The<br />
-            Best Ayurvedic Products
+            BRAINFORCE Syrup<br />
+            Sharp Mind, Strong Memory
           </h2>
         </div>
         

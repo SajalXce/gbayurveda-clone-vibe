@@ -22,17 +22,17 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([
     {
       id: 1,
-      name: "BrainForce Memory Booster",
-      price: 899,
-      quantity: 1,
-      image: "/src/assets/product-1.jpg"
+      name: "BRAINFORCE Syrup 200ml",
+      price: 220,
+      quantity: 2,
+      image: "/src/assets/brainforce-product.jpg"
     },
     {
       id: 2,
-      name: "Ayurvedic Focus Tonic",
-      price: 799,
-      quantity: 2,
-      image: "/src/assets/product-2.jpg"
+      name: "BRAINFORCE Family Pack",
+      price: 800,
+      quantity: 1,
+      image: "/src/assets/brainforce-product.jpg"
     }
   ]);
 

@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Leaf, Shield, Award, Heart, Sparkles } from "lucide-react";
-import sectionBg from "@/assets/section-bg.jpg";
+import { Brain, Focus, ShieldCheck, Award, Heart, Leaf } from "lucide-react";
+import sectionBg from "@/assets/brainforce-herbs-nature.jpg";
 
 const benefits = [
-  { icon: CheckCircle, text: "100% Organic" },
-  { icon: Award, text: "Best Quality" },
-  { icon: Shield, text: "Hygienic Product" },
-  { icon: Sparkles, text: "Quality Tested" },
-  { icon: Heart, text: "Health Care" },
-  { icon: Leaf, text: "Organic Herbal" },
+  { icon: Brain, text: "Boosts Memory" },
+  { icon: Focus, text: "Improves Focus" },
+  { icon: ShieldCheck, text: "Reduces Stress" },
+  { icon: Award, text: "Mental Energy" },
+  { icon: Heart, text: "Brain Health" },
+  { icon: Leaf, text: "Natural Herbs" },
 ];
 
 const BenefitsSection = () => {
@@ -30,16 +30,16 @@ const BenefitsSection = () => {
                 BEST FOR YOU
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight">
-                Benefit From Choosing The Best
+                Benefits of BRAINFORCE Syrup
               </h2>
             </div>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Duis variurna id convallis elementu exerat tincidunt magna, sepharetra est purus aceleo.
+              Complete Ayurvedic brain tonic crafted with centuries-old wisdom and modern research to naturally support your mental health.
             </p>
             
             <Button variant="cta" size="lg" className="px-8 py-4">
-              View All Services
+              Order BRAINFORCE ₹220
             </Button>
           </div>
           
@@ -47,10 +47,10 @@ const BenefitsSection = () => {
           <div className="animate-slide-up">
             <div className="mb-8">
               <h3 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-4">
-                The Combination of Nature & Science
+                Trusted by Students, Professionals & Seniors
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Duis variurid convallis elementu exerat tincidun magna, sepharetra estine purus aceleo anfdye element varudios.
+                BRAINFORCE helps boost memory, improve focus, reduce stress, and increase mental energy — keeping your mind sharp and balanced, naturally.
               </p>
             </div>
             
@@ -68,7 +68,7 @@ const BenefitsSection = () => {
             </div>
             
             <Button variant="outline" size="lg">
-              View Products
+              Shop Now ₹220
             </Button>
           </div>
         </div>
