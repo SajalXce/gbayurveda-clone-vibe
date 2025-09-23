@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-background/80">info@ayurved.com</span>
+                <span className="text-background/80">info@BrainForce.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -72,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            © 2025 Ayurved. All rights reserved. | Designed with for natural healing
+            © 2025 BrainForce. All rights reserved. | Designed with for natural healing
           </p>
         </div>
       </div>

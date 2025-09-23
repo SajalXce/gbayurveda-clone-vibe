@@ -57,6 +57,7 @@ const Navigation = () => {
             {/* Dropdown wrapper */}
             <div className="relative" ref={pagesRef}>
               <button
+              
                 onClick={() => setIsPagesOpen(!isPagesOpen)}
                 className="flex items-center gap-1 cursor-pointer text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
@@ -79,7 +80,7 @@ const Navigation = () => {
                   </a>
 
                   <a
-                    href="/about"
+                    href="/certifications"
                     className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
                   >
                     Certifications

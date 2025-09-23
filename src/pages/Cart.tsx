@@ -146,7 +146,7 @@ const Cart = () => {
                   <Button 
                     variant="outline" 
                     className="w-full"
-                    onClick={() => navigate('/')}
+                    onClick={() => navigate('/product')}
                   >
                     Continue Shopping
                   </Button>

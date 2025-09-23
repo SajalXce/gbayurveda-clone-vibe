@@ -177,7 +177,7 @@ const Refund = () => {
                 <Mail className="w-5 h-5 text-primary" />
                 <div>
                   <p className="font-semibold">Email Us</p>
-                  <p className="text-sm text-muted-foreground">returns@ayurved.com</p>
+                  <p className="text-sm text-muted-foreground">returns@BrainForce.com</p>
                 </div>
               </div>
             </div>

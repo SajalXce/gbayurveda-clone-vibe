@@ -8,7 +8,7 @@ const features = [
   "Hygienic Product",
   "Quality Tested",
   "Health Care",
-  "Organic Herbal"
+  "Organic Herbal",
 ];
 
 const CombinationSection = () => {
@@ -19,16 +19,17 @@ const CombinationSection = () => {
           {/* Left Content */}
           <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-              The Combination<br />
-              of Nature & Science
+              The Combination
+              <br />
+              <p className="mt-2"> of Nature & Science</p>
             </h2>
-            
+
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Duis vulputate elit in elit voluptate cillum in qui nostrud 
-              magna laboris sapiente magna. Sapiente hic porta futurum at, 
-              voluptate veniam futurum dolore ipsum.
+              के साथ तैयार किया गया: एलोवेरा (पत्ता), आंवला (फल), ब्राह्मी,
+              शंखपुष्पी, जटामांसी, मण्डूकपर्णी, वच, अश्वगंधा, हरड़, तुलसी,
+              बहेड़ा, पुनर्नवा, ज्योतिमती, भृंगराज, उस्तखदूस, चीनी
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
                 <div
@@ -41,12 +42,15 @@ const CombinationSection = () => {
                 </div>
               ))}
             </div>
-            
-            <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground px-8">
+
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary-hover text-primary-foreground px-8"
+            >
               View Products
             </Button>
           </div>
-          
+
           {/* Right Image */}
           <div className="animate-scale-in relative">
             <div className="relative rounded-2xl overflow-hidden shadow-elegant">

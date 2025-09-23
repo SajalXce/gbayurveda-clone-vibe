@@ -154,10 +154,12 @@ const Shipping = () => {
                   </CardHeader>
                   <CardContent>
                     <RadioGroup
+                    className="flex flex-col gap-4"
+
                       value={formData.paymentMethod}
                       onValueChange={(value) => setFormData(prev => ({ ...prev, paymentMethod: value }))}
                     >
-                      <div className="flex items-center space-x-2">
+                      <div className="flex  items-center space-x-2">
                         <RadioGroupItem value="cod" id="cod" />
                         <Label htmlFor="cod">Cash on Delivery</Label>
                       </div>

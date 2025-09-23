@@ -1,26 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Leaf, Shield, Award, Heart, Sparkles } from "lucide-react";
+import {
+  CheckCircle,
+  Leaf,
+  Shield,
+  Award,
+  Heart,
+  Sparkles,
+} from "lucide-react";
 import sectionBg from "@/assets/section-bg.jpg";
+import { useNavigate } from "react-router-dom";
+import brainFade from "@/assets/bgl1.png"
 
-const benefits = [
-  { icon: CheckCircle, text: "100% Organic" },
-  { icon: Award, text: "Best Quality" },
-  { icon: Shield, text: "Hygienic Product" },
-  { icon: Sparkles, text: "Quality Tested" },
-  { icon: Heart, text: "Health Care" },
-  { icon: Leaf, text: "Organic Herbal" },
-];
+
 
 const BenefitsSection = () => {
+
+  const navigate  = useNavigate();
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
         style={{ backgroundImage: `url(${sectionBg})` }}
       />
       <div className="absolute inset-0 bg-feature-gradient" />
-      
+
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -33,44 +37,36 @@ const BenefitsSection = () => {
                 Benefit From Choosing The Best
               </h2>
             </div>
-            
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Duis variurna id convallis elementu exerat tincidunt magna, sepharetra est purus aceleo.
+
+            <p className="text-xl mb-8 leading-relaxed">
+              हर बूंद में जड़ी-बूटियों की शक्ति है, जिन्हें हमारे पूर्वज,
+              ऋषि–मुनि प्राचीन समय से अपने मस्तिष्क को मज़बूत और तेज़ रखने के
+              लिए अपनाते थे। वे अपने दिमाग़ से सच्चा प्यार करते थे और यही
+              प्राकृतिक जड़ी-बूटियाँ उनकी ताक़त का राज़ थीं।”
             </p>
-            
+
             <Button variant="cta" size="lg" className="px-8 py-4">
               View All Services
             </Button>
           </div>
-          
+
           {/* Right Content */}
           <div className="animate-slide-up">
-            <div className="mb-8">
-              <h3 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-4">
-                The Combination of Nature & Science
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Duis variurid convallis elementu exerat tincidun magna, sepharetra estine purus aceleo anfdye element varudios.
-              </p>
+             <div className="animate-scale-in relative">
+            <div className="relative rounded-2xl overflow-hidden ">
+              <img
+                src={brainFade}
+                alt="Traditional Ayurvedic herbs and ingredients"
+                className="w-full h-auto"
+              />
+             
             </div>
-            
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-3 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 hover:bg-card hover:shadow-soft transition-all duration-300"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <benefit.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-card-foreground font-medium">{benefit.text}</span>
-                </div>
-              ))}
-            </div>
-            
-            <Button variant="outline" size="lg">
-              View Products
-            </Button>
           </div>
+
+       
+            
+          </div>
+          
         </div>
       </div>
     </section>

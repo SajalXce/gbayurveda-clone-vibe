@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/brainS1.png";
-import bg1 from "@/assets/hero-ayurveda.jpg"
+import bg1 from "@/assets/hero-ayurveda.jpg";
 
 const HeroSection = () => {
   return (
@@ -25,9 +25,10 @@ const HeroSection = () => {
               & Ayurvedic Medicine
             </h2>
 
-            <p className="text-lg text-white/90 leading-relaxed mb-8 max-w-xl">
-              “Crafted with Brahmi, Jatamansi, Ashwagandha and 10+ herbs to
-              boost memory, focus and calmness — naturally.”
+            <p className="text-2xl text-white/90 leading-relaxed mb-8 max-w-xl">
+              के साथ तैयार किया गया: एलोवेरा (पत्ता), आंवला (फल), ब्राह्मी,
+              शंखपुष्पी, जटामांसी, मण्डूकपर्णी, वच, अश्वगंधा, हरड़, तुलसी,
+              बहेड़ा, पुनर्नवा, ज्योतिमती, भृंगराज, उस्तखदूस, चीनी
             </p>
 
             <Button

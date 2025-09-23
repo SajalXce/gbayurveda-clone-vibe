@@ -41,7 +41,27 @@ const AboutUs = () => {
               </h2>
             </div>
 
+          
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-8">
+
+                <p className="text-lg text-slate-700">
+              Aaj ki fast life mein har koi stress, weak concentration aur
+              memory problems se joojh raha hai – chahe student ho, working
+              professional ho ya elderly. Humne BRAINFORCE ko isliye develop
+              kiya hai taki log natural, safe aur science-backed tarike se apne
+              dimaag ko strong bana saken. Ye sirf ek supplement nahi, balki ek
+              commitment hai har ek user ki mental strength aur focus ko boost
+              karne ka. Humara vision hai ki BRAINFORCE har ghar ka trusted
+              brain health partner बने – ek aisa naam jise sunke log
+              automatically ‘Trust, Care aur Natural Relief’ feel karein.” “हर
+              बूंद में जड़ी-बूटियों की शक्ति है, जिन्हें हमारे पूर्वज, ऋषि–मुनि
+              प्राचीन समय से अपने मस्तिष्क को मज़बूत और तेज़ रखने के लिए अपनाते
+              थे। वे अपने दिमाग़ से सच्चा प्यार करते थे और यही प्राकृतिक
+              जड़ी-बूटियाँ उनकी ताक़त का राज़ थीं।
+            </p>
+
+
+
               <p className="text-lg">
                 In today's fast-paced world, our minds are constantly working,
                 yet stress, pollution, and daily pressures often take a toll on
@@ -75,14 +95,6 @@ const AboutUs = () => {
                   money."
                 </p>
               </div>
-
-              <p className="text-lg">
-                Priced fairly at <strong className="text-primary">₹220</strong>,
-                it is made with care and integrity, not for profit alone, but to
-                genuinely help you. BrainForce Syrup – centuries of wisdom,
-                trusted by generations, helping every mind reach its true
-                potential.
-              </p>
 
               <p className="text-lg font-medium text-foreground">
                 Because your brain deserves care, and your dreams deserve focus.
