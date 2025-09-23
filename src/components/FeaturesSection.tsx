@@ -1,25 +1,25 @@
-import { Brain, Focus, ShieldCheck, Star } from "lucide-react";
+import { Leaf, FlaskConical, CheckCircle, Award } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Boosts Memory",
-    description: "Brahmi & Shankhpushpi enhance memory retention and learning ability naturally.",
+    icon: Leaf,
+    title: "100% Organic",
+    description: "Duis variu convls eleme exera tincid magna.",
   },
   {
-    icon: Focus,
-    title: "Improves Focus",
-    description: "Mandukparni & Jatamansi support concentration and mental clarity.",
+    icon: FlaskConical,
+    title: "Chemical Less",
+    description: "Duis variu convls eleme exera tincid magna.",
   },
   {
-    icon: ShieldCheck,
-    title: "Reduces Stress",
-    description: "Ashwagandha & Tulsi help reduce stress and promote mental calmness.",
+    icon: CheckCircle,
+    title: "Tested Product",
+    description: "Duis variu convls eleme exera tincid magna.",
   },
   {
-    icon: Star,
-    title: "Increases Energy",
-    description: "Natural herbs boost mental stamina and cognitive performance.",
+    icon: Award,
+    title: "Pure Ayurveda",
+    description: "Duis variu convls eleme exera tincid magna.",
   },
 ];
 
@@ -29,7 +29,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-            Why Choose BRAINFORCE Syrup
+            Why Choose Pure Ayurveda
           </h2>
         </div>
         
