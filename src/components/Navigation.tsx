@@ -82,6 +82,12 @@ const Navigation = () => {
             </div>
 
             <a
+              href="/about"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+            >
+              About Us
+            </a>
+            <a
               href="/product"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
@@ -139,14 +145,14 @@ const Navigation = () => {
                 Home
               </a>
               <a
-                href="#services"
+                href="/about"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                About Us
               </a>
               <a
-                href="/home"
+                href="/product"
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
