@@ -72,27 +72,37 @@ const Navigation = () => {
               {isPagesOpen && (
                 <div className="absolute left-0 mt-2 w-44 rounded-xl bg-white shadow-lg animate-fade-in">
                   <a
-                    href="/refund"
+                    href="/about"
                     className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
                   >
-                    Refund
+                    About Us
                   </a>
+
+                  <a
+                    href="/about"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    Certifications
+                  </a>
+
                   <a
                     href="/privacy"
                     className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
                   >
                     Privacy
                   </a>
+
+                  <a
+                    href="/refund"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    Refund
+                  </a>
                 </div>
               )}
             </div>
 
-            <a
-              href="/about"
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-            >
-              About Us
-            </a>
+          
             <a
               href="/product"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
@@ -105,12 +115,7 @@ const Navigation = () => {
             >
               Contact
             </a>
-            <a
-              href="/certifications"
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Certifications
-            </a>
+         
           </div>
 
           {/* Phone Number & Mobile Menu */}

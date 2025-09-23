@@ -3,28 +3,28 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Leaf, Users, Award, Target, Shield } from "lucide-react";
-import brainforceHerbs from "@/assets/brainforce-herbs-nature.jpg";
+import brainforceHerbs from "@/assets/leaf1.jpg";
 
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
+        <div
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${brainforceHerbs})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-foreground mb-6">
-              Our <span className="text-primary">Story</span>
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6">
+              <span className="text-white"> Our Story</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Empowering every mind with centuries of trusted Ayurvedic wisdom, 
+            <p className="text-xl text-white leading-relaxed">
+              Empowering every mind with centuries of trusted Ayurvedic wisdom,
               making mental wellness accessible to all
             </p>
           </div>
@@ -43,36 +43,45 @@ const AboutUs = () => {
 
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-8">
               <p className="text-lg">
-                In today's fast-paced world, our minds are constantly working, yet stress, pollution, 
-                and daily pressures often take a toll on memory, focus, and mental clarity. Many of us 
-                struggle quietly, wishing for a natural way to stay sharp and alert.
+                In today's fast-paced world, our minds are constantly working,
+                yet stress, pollution, and daily pressures often take a toll on
+                memory, focus, and mental clarity. Many of us struggle quietly,
+                wishing for a natural way to stay sharp and alert.
               </p>
 
               <p className="text-lg">
-                <strong className="text-foreground">BrainForce Syrup was created with a simple purpose</strong> – 
-                to empower every mind and support every individual who dreams of being sharper, more focused, 
-                and confident in their daily life.
+                <strong className="text-foreground">
+                  BrainForce Syrup was created with a simple purpose
+                </strong>{" "}
+                – to empower every mind and support every individual who dreams
+                of being sharper, more focused, and confident in their daily
+                life.
               </p>
 
               <p className="text-lg">
-                Our formula brings centuries of trusted Ayurvedic wisdom, using herbs that have been 
-                cherished since the times of Rishi-Munis. We believe in real results, not shortcuts. 
-                With consistent use, BrainForce helps improve memory, focus, and mental clarity – giving 
-                you the confidence and energy to face life's challenges every day.
+                Our formula brings centuries of trusted Ayurvedic wisdom, using
+                herbs that have been cherished since the times of Rishi-Munis.
+                We believe in real results, not shortcuts. With consistent use,
+                BrainForce helps improve memory, focus, and mental clarity –
+                giving you the confidence and energy to face life's challenges
+                every day.
               </p>
 
               <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg my-8">
                 <p className="text-lg font-medium text-foreground">
-                  "But BrainForce is more than just a product. It's our way of supporting the common man, 
-                  ensuring that this priceless wisdom is affordable and accessible without straining 
-                  hard-earned money."
+                  "But BrainForce is more than just a product. It's our way of
+                  supporting the common man, ensuring that this priceless wisdom
+                  is affordable and accessible without straining hard-earned
+                  money."
                 </p>
               </div>
 
               <p className="text-lg">
-                Priced fairly at <strong className="text-primary">₹220</strong>, it is made with care and integrity, 
-                not for profit alone, but to genuinely help you. BrainForce Syrup – centuries of wisdom, 
-                trusted by generations, helping every mind reach its true potential.
+                Priced fairly at <strong className="text-primary">₹220</strong>,
+                it is made with care and integrity, not for profit alone, but to
+                genuinely help you. BrainForce Syrup – centuries of wisdom,
+                trusted by generations, helping every mind reach its true
+                potential.
               </p>
 
               <p className="text-lg font-medium text-foreground">
@@ -105,7 +114,8 @@ const AboutUs = () => {
                   Ancient Wisdom
                 </h3>
                 <p className="text-muted-foreground">
-                  Rooted in centuries-old Ayurvedic traditions, trusted by generations of healers and sages.
+                  Rooted in centuries-old Ayurvedic traditions, trusted by
+                  generations of healers and sages.
                 </p>
               </CardContent>
             </Card>
@@ -119,7 +129,8 @@ const AboutUs = () => {
                   Affordable Care
                 </h3>
                 <p className="text-muted-foreground">
-                  Making premium Ayurvedic wellness accessible to everyone, without straining your budget.
+                  Making premium Ayurvedic wellness accessible to everyone,
+                  without straining your budget.
                 </p>
               </CardContent>
             </Card>
@@ -133,7 +144,8 @@ const AboutUs = () => {
                   People First
                 </h3>
                 <p className="text-muted-foreground">
-                  Supporting the common man with genuine care, not just profit-driven motives.
+                  Supporting the common man with genuine care, not just
+                  profit-driven motives.
                 </p>
               </CardContent>
             </Card>
@@ -147,7 +159,8 @@ const AboutUs = () => {
                   Quality Assured
                 </h3>
                 <p className="text-muted-foreground">
-                  GMP & ISO certified facilities with FDA, FSSAI & AYUSH approvals for highest standards.
+                  GMP & ISO certified facilities with FDA, FSSAI & AYUSH
+                  approvals for highest standards.
                 </p>
               </CardContent>
             </Card>
@@ -161,7 +174,8 @@ const AboutUs = () => {
                   Real Results
                 </h3>
                 <p className="text-muted-foreground">
-                  No shortcuts, just proven herbs that deliver genuine improvements in mental wellness.
+                  No shortcuts, just proven herbs that deliver genuine
+                  improvements in mental wellness.
                 </p>
               </CardContent>
             </Card>
@@ -175,7 +189,8 @@ const AboutUs = () => {
                   Trust & Integrity
                 </h3>
                 <p className="text-muted-foreground">
-                  Crafted with care and transparency, every bottle reflects our commitment to your wellness.
+                  Crafted with care and transparency, every bottle reflects our
+                  commitment to your wellness.
                 </p>
               </CardContent>
             </Card>
@@ -191,8 +206,9 @@ const AboutUs = () => {
               Our <span className="text-primary">Mission</span>
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              To make centuries of trusted Ayurvedic wisdom accessible to every individual, 
-              empowering minds to reach their true potential through natural, affordable wellness solutions.
+              To make centuries of trusted Ayurvedic wisdom accessible to every
+              individual, empowering minds to reach their true potential through
+              natural, affordable wellness solutions.
             </p>
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               <a href="/product" className="flex items-center gap-2">
