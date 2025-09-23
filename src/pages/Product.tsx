@@ -3,20 +3,29 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Star, Minus, Plus, ShoppingCart, Heart, Share2, Shield, Truck, RotateCcw } from "lucide-react";
+import {
+  Star,
+  Minus,
+  Plus,
+  ShoppingCart,
+  Heart,
+  Share2,
+  Shield,
+  Truck,
+  RotateCcw,
+} from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
+
 import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
+import product2 from "@/assets/p1.jpg";
+import product3 from "@/assets/p2.jpg";
+import product4 from "@/assets/p3.jpg";
 
-const Product = () => {
-  const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-
-  const product = {
+// Products data - Each image represents a different product
+const PRODUCTS_DATA = {
+  0: {
     id: 1,
     name: "BrainForce Memory Booster",
     price: 899,
@@ -24,15 +33,22 @@ const Product = () => {
     rating: 4.8,
     reviews: 247,
     inStock: true,
-    images: [product1, product2, product3, product4],
-    description: "Advanced Ayurvedic formula designed to enhance memory, focus, and cognitive function naturally.",
-    ingredients: ["Brahmi", "Mandukaparni", "Shankhpushpi", "Ashwagandha", "Jatamansi"],
+    image: product1,
+    description:
+      "Advanced Ayurvedic formula designed to enhance memory, focus, and cognitive function naturally.",
+    ingredients: [
+      "Brahmi",
+      "Mandukaparni",
+      "Shankhpushpi",
+      "Ashwagandha",
+      "Jatamansi",
+    ],
     benefits: [
       "Enhanced memory retention",
-      "Improved focus and concentration", 
+      "Improved focus and concentration",
       "Reduced mental fatigue",
       "Better cognitive performance",
-      "Natural stress relief"
+      "Natural stress relief",
     ],
     dosage: "Take 1-2 capsules twice daily with water, preferably after meals.",
     features: [
@@ -40,31 +56,151 @@ const Product = () => {
       "No Side Effects",
       "Clinically Tested",
       "GMP Certified",
-      "30-Day Money Back Guarantee"
-    ]
-  };
+      "30-Day Money Back Guarantee",
+    ],
+  },
+  1: {
+    id: 2,
+    name: "Ayurvedic Focus Tonic",
+    price: 799,
+    originalPrice: 1099,
+    rating: 4.6,
+    reviews: 189,
+    inStock: true,
+    image: product2,
+    description:
+      "Natural herbal tonic formulated to improve concentration and mental clarity using time-tested Ayurvedic herbs.",
+    ingredients: [
+      "Ginkgo Biloba",
+      "Brahmi",
+      "Gotu Kola",
+      "Rosemary",
+      "Green Tea Extract",
+    ],
+    benefits: [
+      "Sharpened mental focus",
+      "Enhanced cognitive clarity",
+      "Improved attention span",
+      "Reduced brain fog",
+      "Increased mental energy",
+    ],
+    dosage: "Take 10ml (2 teaspoons) twice daily, preferably on empty stomach.",
+    features: [
+      "Liquid Formula for Better Absorption",
+      "Sugar-Free",
+      "Preservative-Free",
+      "Ayush Approved",
+      "15-Day Money Back Guarantee",
+    ],
+  },
+  2: {
+    id: 3,
+    name: "Stress Relief Capsules",
+    price: 649,
+    originalPrice: 899,
+    rating: 4.7,
+    reviews: 312,
+    inStock: true,
+    image: product3,
+    description:
+      "Powerful adaptogenic blend designed to combat stress, anxiety, and promote overall mental wellbeing naturally.",
+    ingredients: [
+      "Ashwagandha",
+      "Rhodiola Rosea",
+      "Holy Basil",
+      "Lemon Balm",
+      "Passionflower",
+    ],
+    benefits: [
+      "Reduced stress and anxiety",
+      "Better mood regulation",
+      "Improved sleep quality",
+      "Enhanced emotional balance",
+      "Increased stress resilience",
+    ],
+    dosage:
+      "Take 1 capsule twice daily with meals, or as directed by healthcare professional.",
+    features: [
+      "Adaptogenic Formula",
+      "Non-Habit Forming",
+      "Vegan Capsules",
+      "Third-Party Tested",
+      "60-Day Satisfaction Guarantee",
+    ],
+  },
+  3: {
+    id: 4,
+    name: "Mental Clarity Syrup",
+    price: 549,
+    originalPrice: 749,
+    rating: 4.5,
+    reviews: 156,
+    inStock: false,
+    image: product4,
+    description:
+      "Delicious herbal syrup that supports mental clarity and cognitive function, perfect for students and professionals.",
+    ingredients: [
+      "Brahmi",
+      "Shankhpushpi",
+      "Saraswatarishta",
+      "Honey",
+      "Natural Flavors",
+    ],
+    benefits: [
+      "Enhanced learning ability",
+      "Better memory recall",
+      "Improved concentration",
+      "Reduced mental exhaustion",
+      "Supports brain health",
+    ],
+    dosage: "Take 15ml (1 tablespoon) twice daily after meals.",
+    features: [
+      "Great Taste",
+      "Easy to Consume",
+      "No Artificial Colors",
+      "Suitable for All Ages",
+      "45-Day Return Policy",
+    ],
+  },
+};
+
+const productImages = [product1, product2, product3, product4];
+
+const Product = () => {
+  const [selectedImage, setSelectedImage] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+
+  // Get current product based on selected image
+  const product = PRODUCTS_DATA[selectedImage];
 
   const handleAddToCart = () => {
     toast.success(`Added ${quantity} ${product.name} to cart!`);
-    // In a real app, this would add to cart state/context
   };
 
-  const relatedProducts = [
-    { id: 2, name: "Ayurvedic Focus Tonic", price: 799, image: product2 },
-    { id: 3, name: "Stress Relief Capsules", price: 649, image: product3 },
-    { id: 4, name: "Mental Clarity Syrup", price: 549, image: product4 },
-  ];
+  const getRelatedProducts = (currentIndex) => {
+    return Object.values(PRODUCTS_DATA)
+      .filter((_, index) => index !== currentIndex)
+      .slice(0, 3);
+  };
+
+  const relatedProducts = getRelatedProducts(selectedImage);
+
+  // Remove the ProductSelector component as it's no longer needed
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-muted-foreground mb-8">
-          <a href="/" className="hover:text-primary">Home</a>
+          <a href="/" className="hover:text-primary">
+            Home
+          </a>
           <span className="mx-2">/</span>
-          <a href="/#products" className="hover:text-primary">Products</a>
+          <a href="/#products" className="hover:text-primary">
+            Products
+          </a>
           <span className="mx-2">/</span>
           <span className="text-foreground">{product.name}</span>
         </nav>
@@ -74,23 +210,28 @@ const Product = () => {
           <div className="space-y-4">
             <div className="aspect-square overflow-hidden rounded-2xl bg-muted">
               <img
-                src={product.images[selectedImage]}
+                src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="grid grid-cols-4 gap-2">
-              {product.images.map((image, index) => (
+              {productImages.map((image, index) => (
                 <button
                   key={index}
-                  onClick={() => setSelectedImage(index)}
+                  onClick={() => {
+                    setSelectedImage(index);
+                    setQuantity(1); // Reset quantity when changing product
+                  }}
                   className={`aspect-square overflow-hidden rounded-lg border-2 transition-colors ${
-                    selectedImage === index ? 'border-primary' : 'border-border hover:border-primary/50'
+                    selectedImage === index
+                      ? "border-primary"
+                      : "border-border hover:border-primary/50"
                   }`}
                 >
                   <img
                     src={image}
-                    alt={`${product.name} view ${index + 1}`}
+                    alt={`Product ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -110,7 +251,9 @@ const Product = () => {
                     <Star
                       key={i}
                       className={`w-4 h-4 ${
-                        i < Math.floor(product.rating) ? 'text-amber-400 fill-amber-400' : 'text-muted-foreground'
+                        i < Math.floor(product.rating)
+                          ? "text-amber-400 fill-amber-400"
+                          : "text-muted-foreground"
                       }`}
                     />
                   ))}
@@ -125,8 +268,12 @@ const Product = () => {
             </div>
 
             <div className="flex items-baseline gap-4">
-              <span className="text-3xl font-bold text-primary">₹{product.price}</span>
-              <span className="text-lg text-muted-foreground line-through">₹{product.originalPrice}</span>
+              <span className="text-3xl font-bold text-primary">
+                ₹{product.price}
+              </span>
+              <span className="text-lg text-muted-foreground line-through">
+                ₹{product.originalPrice}
+              </span>
               <Badge variant="secondary" className="text-green-600">
                 Save ₹{product.originalPrice - product.price}
               </Badge>
@@ -167,7 +314,7 @@ const Product = () => {
                 className="flex-1 bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 rounded-xl"
               >
                 <ShoppingCart className="w-4 h-4 mr-2" />
-                Add to Cart
+                {product.inStock ? "Add to Cart" : "Out of Stock"}
               </Button>
               <Button variant="outline" size="lg">
                 <Heart className="w-4 h-4" />
@@ -203,7 +350,7 @@ const Product = () => {
             <TabsTrigger value="benefits">Benefits</TabsTrigger>
             <TabsTrigger value="reviews">Reviews</TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="description" className="mt-6">
             <Card>
               <CardContent className="p-6">
@@ -263,8 +410,30 @@ const Product = () => {
           <TabsContent value="reviews" className="mt-6">
             <Card>
               <CardContent className="p-6">
+                <div className="mb-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-2xl font-bold">{product.rating}</span>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-4 h-4 ${
+                            i < Math.floor(product.rating)
+                              ? "text-amber-400 fill-amber-400"
+                              : "text-muted-foreground"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-muted-foreground">
+                      Based on {product.reviews} reviews
+                    </span>
+                  </div>
+                </div>
                 <div className="text-center py-8">
-                  <p className="text-muted-foreground">Reviews will be displayed here.</p>
+                  <p className="text-muted-foreground">
+                    Detailed reviews will be displayed here.
+                  </p>
                   <p className="text-sm text-muted-foreground mt-2">
                     Customer reviews and ratings system coming soon.
                   </p>
@@ -276,10 +445,24 @@ const Product = () => {
 
         {/* Related Products */}
         <section>
-          <h2 className="text-2xl font-heading font-bold text-foreground mb-8">Related Products</h2>
+          <h2 className="text-2xl font-heading font-bold text-foreground mb-8">
+            Related Products
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedProducts.map((relatedProduct) => (
-              <Card key={relatedProduct.id} className="group cursor-pointer hover:shadow-lg transition-shadow">
+            {relatedProducts.map((relatedProduct, index) => (
+              <Card
+                key={relatedProduct.id}
+                className="group cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() => {
+                  // Find the index of this product in the productImages array
+                  const productIndex = Object.values(PRODUCTS_DATA).findIndex(
+                    (p) => p.id === relatedProduct.id
+                  );
+                  setSelectedImage(productIndex);
+                  setQuantity(1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 <CardContent className="p-4">
                   <div className="aspect-square overflow-hidden rounded-lg mb-4">
                     <img
@@ -288,8 +471,32 @@ const Product = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">{relatedProduct.name}</h3>
-                  <p className="text-lg font-bold text-primary">₹{relatedProduct.price}</p>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {relatedProduct.name}
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <p className="text-lg font-bold text-primary">
+                      ₹{relatedProduct.price}
+                    </p>
+                    <p className="text-sm text-muted-foreground line-through">
+                      ₹{relatedProduct.originalPrice}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1 mt-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-3 h-3 ${
+                          i < Math.floor(relatedProduct.rating)
+                            ? "text-amber-400 fill-amber-400"
+                            : "text-muted-foreground"
+                        }`}
+                      />
+                    ))}
+                    <span className="text-xs text-muted-foreground ml-1">
+                      ({relatedProduct.reviews})
+                    </span>
+                  </div>
                 </CardContent>
               </Card>
             ))}

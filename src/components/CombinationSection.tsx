@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import combinationHero from "@/assets/combination-hero.jpg";
+import combinationHero from "@/assets/bgl1.png";
 
 const features = [
   "100% Organic",

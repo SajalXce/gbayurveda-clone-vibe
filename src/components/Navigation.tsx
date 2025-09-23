@@ -3,11 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, Leaf, ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPagesOpen, setIsPagesOpen] = useState(false);
   const pagesRef = useRef<HTMLDivElement | null>(null);
+
+  const navigate = useNavigate();
 
   // Close dropdown if clicked outside
   useEffect(() => {
@@ -30,7 +33,10 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div
+            onClick={() => navigate("/")}
+            className="flex items-center cursor-pointer space-x-2"
+          >
             <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full">
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>

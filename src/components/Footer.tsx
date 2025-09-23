@@ -72,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            © 2024 Ayurved. All rights reserved. | Designed with for natural healing
+            © 2025 Ayurved. All rights reserved. | Designed with for natural healing
           </p>
         </div>
       </div>

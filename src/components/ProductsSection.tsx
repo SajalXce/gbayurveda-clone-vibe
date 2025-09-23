@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
-
+import product2 from "@/assets/p1.jpg";
+import product3 from "@/assets/p2.jpg";
+import product4 from "@/assets/p3.jpg"
 const products = [
   {
     id: 1,

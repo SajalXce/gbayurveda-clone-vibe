@@ -149,9 +149,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Address</h3>
                       <p className="text-muted-foreground">
-                        123 Wellness Street<br />
-                        Ayurveda Plaza, Health City<br />
-                        Mumbai, Maharashtra 400001
+                       <br />
+                        Bela Pratapgarh<br />
+                      Uttar Pradesh 230001
                       </p>
                     </div>
                   </div>
