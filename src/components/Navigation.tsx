@@ -99,6 +99,13 @@ const Navigation = () => {
                   >
                     Refund
                   </a>
+
+                  <a
+                    href="/faq"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    FAQ
+                  </a>
                 </div>
               )}
             </div>
@@ -183,6 +190,13 @@ const Navigation = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Certifications
+              </a>
+              <a
+                href="/faq"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
               </a>
               <div className="flex items-center space-x-2 text-muted-foreground pt-2">
                 <Phone className="w-4 h-4" />
