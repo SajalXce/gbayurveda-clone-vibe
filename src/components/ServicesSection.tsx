@@ -1,4 +1,12 @@
-import { Leaf, Pill, Stethoscope, FlaskConical, Brain, MessageSquare } from "lucide-react";
+import {
+  Leaf,
+  Pill,
+  Stethoscope,
+  FlaskConical,
+  Brain,
+  MessageSquare,
+} from "lucide-react";
+import left2 from "@/assets/left2.png";
 
 const services = [
   {
@@ -35,15 +43,21 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section 
-    id="services" 
-    className="py-20 bg-natural-gradient">
-        {/* <section
+    <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg1})` }}
-    ></section> */}
-      <div className="container mx-auto px-4">
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      {/* Background image with opacity */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${left2})`,
+          opacity: 0.7, // adjust as needed
+        }}
+      />
+
+      {/* Content stays fully visible */}
+      <div className="relative z-10 container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -54,11 +68,11 @@ const ServicesSection = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                 <service.icon className="w-8 h-8 text-primary" />
               </div>
-              
+
               <h3 className="text-xl font-heading font-semibold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              
+
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>

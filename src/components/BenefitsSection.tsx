@@ -7,23 +7,20 @@ import {
   Heart,
   Sparkles,
 } from "lucide-react";
-import sectionBg from "@/assets/section-bg.jpg";
+import leaf1 from "@/assets/left1.png";
 import { useNavigate } from "react-router-dom";
-import brainFade from "@/assets/bgl1.png"
-
-
+import brainFade from "@/assets/brainGreen.png";
 
 const BenefitsSection = () => {
-
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-5"
-        style={{ backgroundImage: `url(${sectionBg})` }}
+        className="absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: `url(${leaf1})` }}
       />
-      <div className="absolute inset-0 bg-feature-gradient" />
+     
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -51,22 +48,12 @@ const BenefitsSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className="animate-slide-up">
-             <div className="animate-scale-in relative">
-            <div className="relative rounded-2xl overflow-hidden ">
-              <img
-                src={brainFade}
-                alt="Traditional Ayurvedic herbs and ingredients"
-                className="w-full h-auto"
-              />
-             
-            </div>
-          </div>
 
-       
-            
-          </div>
-          
+          <img
+            src={brainFade}
+            alt="Traditional Ayurvedic herbs and ingredients"
+            className="w-[90%] rounded-2xl h-[60%]"
+          />
         </div>
       </div>
     </section>
