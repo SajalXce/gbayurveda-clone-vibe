@@ -21,7 +21,7 @@ const PaymentSuccess = () => {
               Order Placed Successfully!
             </h1>
             <p className="text-muted-foreground">
-              Thank you for choosing BrianForce. Your order has been confirmed.
+              Thank you for choosing BrainForce. Your order has been confirmed.
             </p>
           </div>
 

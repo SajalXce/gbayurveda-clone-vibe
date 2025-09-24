@@ -169,8 +169,8 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-primary mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@brianforce.com</p>
-                      <p className="text-muted-foreground">support@brianforce.com</p>
+                      <p className="text-muted-foreground">info@brainforce.com</p>
+                      <p className="text-muted-foreground">support@brainforce.com</p>
                     </div>
                   </div>
                   
@@ -190,7 +190,7 @@ const Contact = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Why Choose BrianForce?</CardTitle>
+                  <CardTitle>Why Choose BrainForce?</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">

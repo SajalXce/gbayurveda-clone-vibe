@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Leaf, Users, Award, Target, Shield } from "lucide-react";
 import brainforceHerbs from "@/assets/leaf1.jpg";
+import chl from "@/assets/chl1.jpg";
+import mnl from "@/assets/mnl.png";
+import ol1 from "@/assets/ol1.png";
 
 const AboutUs = () => {
   return (
@@ -41,26 +44,30 @@ const AboutUs = () => {
               </h2>
             </div>
 
-          
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-8">
-
+              <div className="flex flex-row gap-4 ">
                 <p className="text-lg text-slate-700">
-              Aaj ki fast life mein har koi stress, weak concentration aur
-              memory problems se joojh raha hai – chahe student ho, working
-              professional ho ya elderly. Humne BRAINFORCE ko isliye develop
-              kiya hai taki log natural, safe aur science-backed tarike se apne
-              dimaag ko strong bana saken. Ye sirf ek supplement nahi, balki ek
-              commitment hai har ek user ki mental strength aur focus ko boost
-              karne ka. Humara vision hai ki BRAINFORCE har ghar ka trusted
-              brain health partner बने – ek aisa naam jise sunke log
-              automatically ‘Trust, Care aur Natural Relief’ feel karein.” “हर
-              बूंद में जड़ी-बूटियों की शक्ति है, जिन्हें हमारे पूर्वज, ऋषि–मुनि
-              प्राचीन समय से अपने मस्तिष्क को मज़बूत और तेज़ रखने के लिए अपनाते
-              थे। वे अपने दिमाग़ से सच्चा प्यार करते थे और यही प्राकृतिक
-              जड़ी-बूटियाँ उनकी ताक़त का राज़ थीं।
-            </p>
+                  Aaj ki fast life mein har koi stress, weak concentration aur
+                  memory problems se joojh raha hai – chahe student ho, working
+                  professional ho ya elderly. Humne BRAINFORCE ko isliye develop
+                  kiya hai taki log natural, safe aur science-backed tarike se
+                  apne dimaag ko strong bana saken. Ye sirf ek supplement nahi,
+                  balki ek commitment hai har ek user ki mental strength aur
+                  focus ko boost karne ka. Humara vision hai ki BRAINFORCE har
+                  ghar ka trusted brain health partner बने – ek aisa naam jise
+                  sunke log automatically ‘Trust, Care aur Natural Relief’ feel
+                  karein.” “हर बूंद में जड़ी-बूटियों की शक्ति है, जिन्हें हमारे
+                  पूर्वज, ऋषि–मुनि प्राचीन समय से अपने मस्तिष्क को मज़बूत और
+                  तेज़ रखने के लिए अपनाते थे। वे अपने दिमाग़ से सच्चा प्यार करते
+                  थे और यही प्राकृतिक जड़ी-बूटियाँ उनकी ताक़त का राज़ थीं।
+                </p>
 
-
+                <img
+                  className="w-[40%] rounded-xl"
+                  alt="BrainForce"
+                  src={chl}
+                />
+              </div>
 
               <p className="text-lg">
                 In today's fast-paced world, our minds are constantly working,
@@ -105,8 +112,15 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 lg:py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 lg:py-24 bg-muted/30">
+        {/* Background image (full, not cropped) */}
+        <img
+          src={ol1}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-contain lg:object-cover object-center opacity-30 pointer-events-none"
+        />
+
+        <div className="container relative mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-6">
               Our <span className="text-primary">Values</span>
@@ -213,20 +227,32 @@ const AboutUs = () => {
       {/* Mission Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-8">
-              Our <span className="text-primary">Mission</span>
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              To make centuries of trusted Ayurvedic wisdom accessible to every
-              individual, empowering minds to reach their true potential through
-              natural, affordable wellness solutions.
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              <a href="/product" className="flex items-center gap-2">
-                Discover BrainForce
-              </a>
-            </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text content */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-8">
+                Our <span className="text-primary">Mission</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                To make centuries of trusted Ayurvedic wisdom accessible to
+                every individual, empowering minds to reach their true potential
+                through natural, affordable wellness solutions.
+              </p>
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <a href="/product" className="flex items-center gap-2">
+                  Discover BrainForce
+                </a>
+              </Button>
+            </div>
+
+            {/* Image */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                className="w-full max-w-md rounded-xl shadow-lg"
+                alt="BrainForce"
+                src={mnl}
+              />
+            </div>
           </div>
         </div>
       </section>

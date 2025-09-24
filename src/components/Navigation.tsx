@@ -41,7 +41,7 @@ const Navigation = () => {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-2xl font-heading font-bold text-foreground">
-              BrianForce
+              BrainForce
             </span>
           </div>
 
@@ -57,7 +57,6 @@ const Navigation = () => {
             {/* Dropdown wrapper */}
             <div className="relative" ref={pagesRef}>
               <button
-              
                 onClick={() => setIsPagesOpen(!isPagesOpen)}
                 className="flex items-center gap-1 cursor-pointer text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
@@ -72,13 +71,6 @@ const Navigation = () => {
 
               {isPagesOpen && (
                 <div className="absolute left-0 mt-2 w-44 rounded-xl bg-white shadow-lg animate-fade-in">
-                  <a
-                    href="/about"
-                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
-                  >
-                    About Us
-                  </a>
-
                   <a
                     href="/certifications"
                     className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
@@ -110,7 +102,6 @@ const Navigation = () => {
               )}
             </div>
 
-          
             <a
               href="/product"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
@@ -118,12 +109,18 @@ const Navigation = () => {
               Products
             </a>
             <a
+              href="/about"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+            >
+              About
+            </a>
+
+            <a
               href="/contact"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
               Contact
             </a>
-         
           </div>
 
           {/* Phone Number & Mobile Menu */}

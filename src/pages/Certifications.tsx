@@ -102,7 +102,7 @@ const Certifications = () => {
             Our Certifications
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            BrianForce is committed to delivering the highest quality Ayurvedic products. 
+            BrainForce is committed to delivering the highest quality Ayurvedic products. 
             Our certifications reflect our dedication to excellence, safety, and authenticity.
           </p>
         </div>
