@@ -98,6 +98,20 @@ const Navigation = () => {
                   >
                     FAQ
                   </a>
+
+                  <a
+                    href="/terms"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    Terms & Conditions
+                  </a>
+
+                  <a
+                    href="/shipping-policy"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    Shipping Policy
+                  </a>
                 </div>
               )}
             </div>
@@ -194,6 +208,20 @@ const Navigation = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
+              </a>
+              <a
+                href="/terms"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Terms & Conditions
+              </a>
+              <a
+                href="/shipping-policy"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Shipping Policy
               </a>
               <div className="flex items-center space-x-2 text-muted-foreground pt-2">
                 <Phone className="w-4 h-4" />
